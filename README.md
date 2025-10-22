@@ -1,4 +1,3 @@
-// ...existing code...
 # Weather App (Simple OpenWeatherMap Demo)
 
 A minimal client-side weather app that fetches current weather for a searched location using the OpenWeatherMap API. Type a city name, press Enter or click Search, and see the temperature, description, and a background that switches between warm and cold images.
