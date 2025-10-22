@@ -1,3 +1,5 @@
+<img width="734" height="647" alt="image" src="https://github.com/user-attachments/assets/54a43b3e-0baf-49ef-af8f-069a2ccc8526" />
+
 # Weather App (Simple OpenWeatherMap Demo)
 
 A minimal client-side weather app that fetches current weather for a searched location using the OpenWeatherMap API. Type a city name, press Enter or click Search, and see the temperature, description, and a background that switches between warm and cold images.
