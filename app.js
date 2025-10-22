@@ -5,6 +5,7 @@ const api = {
 
 const searchBox = document.querySelector('#search-bar');
 const searchButton = document.querySelector('#search-button');
+const mainBg = document.getElementById('main-bg');
 
 searchButton.addEventListener('click', function(){
   if (searchBox.value.length > 0){
@@ -24,7 +25,6 @@ function getWeather(location){
   })  
 }
 
-
 function getLocation(data) {
   const city = document.getElementById("city");
   const date = document.getElementById("date");
@@ -33,10 +33,16 @@ function getLocation(data) {
   const now = new Date();
   let date1 = now.getDate()
 
-  city.innerHTML = `${data.name}, ${data.sys.country}`;
-  date.innerHTML = `${now.toLocaleDateString()}, ${now.toLocaleTimeString()}`;
+  city.textContent = `${data.name}, ${data.sys.country}`;
+  date.textContent = `${now.toLocaleDateString()}, ${now.toLocaleTimeString()}`;
   
+  temperature.textContent= `${Math.round(data.main.temp)}°C`;
+    weather.textContent = `${data.weather[0].description.toUpperCase()}`;
+    if (data.main.temp >= 16){
+        mainBg.classList.add('warm-bg');
+    }
+    else {
+        mainBg.classList.remove('warm-bg');
+    }
 }
-
-
 
